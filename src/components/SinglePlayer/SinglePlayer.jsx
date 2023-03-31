@@ -1,7 +1,11 @@
 import { faCircleCheck as selectRegular } from '@fortawesome/free-regular-svg-icons';
 import { faCircleCheck as selectSolid } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+import { faBookmark } from '@fortawesome/free-solid-svg-icons';
 import React from 'react';
+
+
 
 
 
@@ -112,6 +116,10 @@ const SinglePlayer = ({ singleData, handleSelect }) => {
         </p>
 
       </div>
+
+
+
+      
       
       <div className="flex justify-around mb-4">
         {/* <p>Job: {job}</p> */}
@@ -125,7 +133,16 @@ const SinglePlayer = ({ singleData, handleSelect }) => {
           type="button"
           className="w-full btn btn-xs rounded-md"
         >
-  <span className="mr-2" style={{textDecoration: 'underline', fontSize: '20px', color: 'blue', fontFamily: 'Exo 2', fontStyle: 'normal', position: 'relative', left: '-425px', top: '-80px'}}>Mark As Read</span>
+  <span className="mr-2" style=
+  {{textDecoration: 'underline', 
+  fontSize: '20px', 
+  color: 'blue',
+   fontFamily: 'Exo 2', 
+   fontStyle: 'normal', 
+   position: 'relative', 
+   left: '-425px', 
+   top: '-80px'
+   }}>Mark As Read</span>
 
 
 
@@ -138,7 +155,40 @@ const SinglePlayer = ({ singleData, handleSelect }) => {
           )} */}
         </button>
       </div>
+
+
+      {/* creating the bookmark button  */}
+      
+
+      <div className="card-actions">
+      <button
+  onClick={() => handleSelect(id)}
+  type="button"
+  className="w-full btn btn-xs rounded-md"
+
+  
+>
+  <span className="mr-2" style={{ fontSize: '20px', color: 'rgba(17, 17, 17, 0.6)', fontFamily: 'Exo 2', fontStyle: 'normal', position: 'relative', left: '470px', top: '-315px' }}>
+    {price} Min Read
+     <FontAwesomeIcon icon={faBookmark} />
+  </span>
+
+ 
+  
+</button>
+
+      </div>
+
+
+
+      {/* creating the bookmark button  */}
+
+
     </div>
+
+
+
+
   );
 };
 
