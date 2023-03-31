@@ -3,13 +3,7 @@ export const addToDb = (id) => {
 
   const isCartAvailable = JSON.parse(localStorage.getItem('players-cart'));
   if (isCartAvailable && isCartAvailable.length > 0) {
-    if (isCartAvailable.includes(id)) {
-      const index = isCartAvailable.indexOf(id);
-      isCartAvailable.splice(index, 1);
-      shoppingCart.push(...isCartAvailable);
-    } else {
-      shoppingCart.push(...isCartAvailable, id);
-    }
+    shoppingCart = [...isCartAvailable, id];
   } else {
     shoppingCart.push(id);
   }

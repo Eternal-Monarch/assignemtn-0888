@@ -74,11 +74,11 @@ const PlayersRoom = () => {
 
 
   const handleSelect = (playerId) => {
-    if (cartData.length < 11) {
+    if (cartData.length < 100) {
       addToDb(playerId);
       setSelectAction(!selectAction);
     } else {
-      toast.error('You cannot add more than 11 players!');
+      toast.error('You cannot add more than 100 things!');
     }
   };
 
@@ -97,7 +97,7 @@ const PlayersRoom = () => {
       <div className="grid md:grid-cols-6 gap-8">
         <div className="md:col-span-4 mb-8">
           {/* <h1 className="text-2xl font-bold text-center mb-8">Select Your Best Eleven</h1> */}
-          <div className="grid grid-cols-1 md:grid-cols-1 gap-8">
+          <div className="grid grid-cols-1 md:grid-cols- gap-8">
             {playersData.map((singleData, index) => (
               <SinglePlayer
                 key={index}
