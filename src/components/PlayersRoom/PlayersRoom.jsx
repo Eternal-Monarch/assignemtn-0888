@@ -6,6 +6,11 @@ import { addToDb, deleteShoppingCart } from '../../utilities/fakedb';
 import SideCart from '../SideCart/SideCart';
 import SinglePlayer from '../SinglePlayer/SinglePlayer';
 
+
+
+
+
+
 const PlayersRoom = () => {
   const [playersData, setPlayersData] = useState([]);
   const [tempData, setTempData] = useState([]);
@@ -77,8 +82,10 @@ const PlayersRoom = () => {
     if (cartData.length < 100) {
       addToDb(playerId);
       setSelectAction(!selectAction);
+      toast.info('You Have Already Bookmarked This Blog');
     } else {
       toast.error('You cannot add more than 100 things!');
+      // toast.info('You Have Already Bookmarked This Blog');
     }
   };
 

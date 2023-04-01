@@ -5,7 +5,7 @@ const Footer = () => {
   return (
     <footer>
       <div className="container">
-      <p style={{ textDecoration: "underline", color: "red", fontSize: "24px", fontWeight: "bold" }}>Question No.2 Props vs state</p>
+      <p style={{ textDecoration: "underline", color: "red", fontSize: "24px", fontWeight: "bold" }}>Question No.1 Props vs state</p>
 <h4 style={{ fontWeight: "bold", fontSize: "1.2rem", color: "green" }}>
   answer: Props are like instructions given by a teacher to a student. When a teacher gives instructions to a student, the student has to follow them. Similarly, when a component in React receives props, it has to follow those instructions and use them to render something.
   <br />

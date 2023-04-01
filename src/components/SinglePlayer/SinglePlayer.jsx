@@ -3,7 +3,15 @@ import { faCircleCheck as selectSolid } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 import { faBookmark } from '@fortawesome/free-solid-svg-icons';
-import React from 'react';
+
+import React, { useState } from 'react';
+
+
+
+
+
+
+
 
 
 
@@ -63,7 +71,7 @@ const SinglePlayer = ({ singleData, handleSelect }) => {
             color: 'white',
           }}
         >
-          Age: {age}
+          Publish Date: {age}
         </p>
 
         <p
